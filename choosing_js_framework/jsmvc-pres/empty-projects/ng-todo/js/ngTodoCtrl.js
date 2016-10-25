@@ -6,4 +6,5 @@ ngTodo.controller('NgTodoCtrl', function NgTodoCtrl($scope) {
     { val: "Pears", completed: false} ,
     { val: "Berries", completed: false }
   ];
+
 });
