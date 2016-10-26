@@ -7,4 +7,20 @@ ngTodo.controller('NgTodoCtrl', function NgTodoCtrl($scope) {
     { val: "Berries", completed: false }
   ];
 
+  $scope.addNewTask = function() {
+    $scope.todos.unshift({ completed: false, val: $scope.newTask });
+    $scope.newTask = '';
+  };
+
+  $scope.clearCompleted = function() {
+    $scope.todos = $scope.todos.filter(function(el) {
+      return !el.completed;
+    });
+  };
+
+  $scope.removeTask = function(idx) {
+    $scope.todos.splice(idx, 1);
+  };
+
+
 });
